@@ -7,7 +7,7 @@
     source env/bin/activate
     pip3 install -r requirements.txt
 	
-	# Windows:
+	# Windows
 	py -3 -m venv venv
 	venv\Scripts\activate
 	pip3 install -r requirements.txt
