@@ -10,12 +10,12 @@ Options:
   --version         Show version.
 """
 
-from docopt import docopt
 import os
 import tempfile
 import zipfile
 import json
 import xml.etree.ElementTree as ET
+from docopt import docopt
 
 
 def get_element_text(root, tag):
@@ -52,7 +52,7 @@ def main():
         gtm_files = {}  # file list
         with zipfile.ZipFile(args['<input_gtm_file>'], 'r') as zip_ref:
             zip_ref.extractall(tmp_dirname)
-            for root, dirs, files in os.walk(tmp_dirname):
+            for root, _, files in os.walk(tmp_dirname):
                 name = 'gtm' if root == tmp_dirname else os.path.basename(os.path.normpath(root))
                 gtm_files[name] = []
                 for item in files:
