@@ -13,3 +13,9 @@
     pip3 install -r requirements.txt
 
     python gtn-server
+
+
+## Local checks
+
+    ./pep8-diff.sh show
+    pylint gtn-server
