@@ -12,14 +12,14 @@ then
 elif [ "$1" == "apply" ]
 then
 
-    autopep8 --max-line-length=100 --in-place -aaa -r ${SOURCE_PATH}/gtn-server/
+    autopep8 --max-line-length=100 --in-place -aaa -r ${SOURCE_PATH}/gtn_server/
 
 elif [ "$1" == "show" ]
 then
 
     TMP_FILE=`mktemp`
 
-    autopep8 --max-line-length=100 --diff -aaa -r ${SOURCE_PATH}/gtn-server/ >> ${TMP_FILE}
+    autopep8 --max-line-length=100 --diff -aaa -r ${SOURCE_PATH}/gtn_server/ >> ${TMP_FILE}
 
     if [ -s ${TMP_FILE} ]
     then
